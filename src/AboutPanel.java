@@ -5,7 +5,7 @@ import java.awt.event.WindowListener;
 
 public class AboutPanel extends JFrame {
 
-    public AboutPanel(Tetris tetris){
+    public AboutPanel(Tetris tetris) {
         setResizable(false);
 
         setTitle("About");
@@ -57,7 +57,7 @@ public class AboutPanel extends JFrame {
                 ← переместить влево; → переместить вправо
                 ↑ повернуть влево; ↓ повернуть вправо
                 пробел - мгновенное падение
-                
+                                
                 Created by Чистяков Константин
                     студент группы ЕТ-311
                 Исходный код на GitHub: https://github.com/ArribaSon/Tetris

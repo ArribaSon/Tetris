@@ -62,7 +62,7 @@ public class GameField extends JPanel {
         timer.start();
 
         statusBar.setText(Integer.toString(numberLinesRemoved));
-        if(isPaused){
+        if (isPaused) {
             pause();
         }
         repaint();
@@ -117,7 +117,7 @@ public class GameField extends JPanel {
     }
 
     private void dropDown() {
-        if(!isPaused){
+        if (!isPaused) {
             int newY = currentY;
 
             while (newY > 0) {
@@ -310,11 +310,11 @@ public class GameField extends JPanel {
         }
     }
 
-    private void newScore(){
-        for(int i = 0; i < scores.length; i++){
-            if(scores[i] < numberLinesRemoved){
-                for(int j = scores.length - 1; j > i; j--){
-                    scores[j] = scores[j-1];
+    private void newScore() {
+        for (int i = 0; i < scores.length; i++) {
+            if (scores[i] < numberLinesRemoved) {
+                for (int j = scores.length - 1; j > i; j--) {
+                    scores[j] = scores[j - 1];
                 }
                 scores[i] = numberLinesRemoved;
                 break;

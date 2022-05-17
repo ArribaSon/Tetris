@@ -3,9 +3,9 @@ import java.awt.*;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 
-public class HighScorePanel  extends JFrame {
+public class HighScorePanel extends JFrame {
 
-    public HighScorePanel(int[] scores, Tetris tetris){
+    public HighScorePanel(int[] scores, Tetris tetris) {
         setResizable(false);
 
         setTitle("Top");
@@ -60,7 +60,7 @@ public class HighScorePanel  extends JFrame {
         }
 
         textPane.setText(string.toString());
-        add(textPane,BorderLayout.NORTH);
+        add(textPane, BorderLayout.NORTH);
 
         setLocationRelativeTo(null);
     }

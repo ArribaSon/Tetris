@@ -11,15 +11,15 @@ public class Shape {
         coordinates = new int[4][2];
 
         //Фигуры
-        coordinatesTable = new int[][][] {
-                { { 0, 0 },   { 0, 0 },   { 0, 0 },   { 0, 0 } },
-                { { 0, -1 },  { 0, 0 },   { -1, 0 },  { -1, 1 } },
-                { { 0, -1 },  { 0, 0 },   { 1, 0 },   { 1, 1 } },
-                { { 0, -1 },  { 0, 0 },   { 0, 1 },   { 0, 2 } },
-                { { -1, 0 },  { 0, 0 },   { 1, 0 },   { 0, 1 } },
-                { { 0, 0 },   { 1, 0 },   { 0, 1 },   { 1, 1 } },
-                { { -1, -1 }, { 0, -1 },  { 0, 0 },   { 0, 1 } },
-                { { 1, -1 },  { 0, -1 },  { 0, 0 },   { 0, 1 } }
+        coordinatesTable = new int[][][]{
+                {{0, 0}, {0, 0}, {0, 0}, {0, 0}},
+                {{0, -1}, {0, 0}, {-1, 0}, {-1, 1}},
+                {{0, -1}, {0, 0}, {1, 0}, {1, 1}},
+                {{0, -1}, {0, 0}, {0, 1}, {0, 2}},
+                {{-1, 0}, {0, 0}, {1, 0}, {0, 1}},
+                {{0, 0}, {1, 0}, {0, 1}, {1, 1}},
+                {{-1, -1}, {0, -1}, {0, 0}, {0, 1}},
+                {{1, -1}, {0, -1}, {0, 0}, {0, 1}}
         };
 
         setShape(TypeShape.NoShape);
@@ -67,7 +67,7 @@ public class Shape {
     //Установка конкретного типа фигуры
     protected void setShape(TypeShape typeShape) {
 
-        for (int i = 0; i < 4 ; i++) {
+        for (int i = 0; i < 4; i++) {
 
             System.arraycopy(coordinatesTable[typeShape.ordinal()][i], 0, coordinates[i], 0, 2);
         }
@@ -106,7 +106,7 @@ public class Shape {
         return coordinates[index][1];
     }
 
-    public TypeShape getShape()  {
+    public TypeShape getShape() {
 
         return pieceShape;
     }
@@ -115,7 +115,7 @@ public class Shape {
 
         int m = coordinates[0][1];
 
-        for (int i=0; i < 4; i++) {
+        for (int i = 0; i < 4; i++) {
 
             m = Math.min(m, coordinates[i][1]);
         }
