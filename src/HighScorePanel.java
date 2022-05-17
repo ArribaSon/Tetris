@@ -55,8 +55,8 @@ public class HighScorePanel  extends JFrame {
 
         StringBuilder string = new StringBuilder();
 
-        for(int i = 0; i < scores.length; i++){
-            string.append(scores[i]).append("\n");
+        for (int score : scores) {
+            string.append(score).append("\n");
         }
 
         textPane.setText(string.toString());
