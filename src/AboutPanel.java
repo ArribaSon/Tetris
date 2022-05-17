@@ -8,8 +8,8 @@ public class AboutPanel extends JFrame {
     public AboutPanel(Tetris tetris){
         setResizable(false);
 
-        setTitle("Tetris");
-        setSize(200, 200);
+        setTitle("About");
+        setSize(400, 200);
         setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
         addWindowListener(new WindowListener() {
             @Override
@@ -51,7 +51,17 @@ public class AboutPanel extends JFrame {
 
         JTextPane textPane = new JTextPane();
         textPane.setEditable(false);
-        textPane.setText("");
+        textPane.setText("""
+                Тетрис
+                Управление:
+                ← переместить влево; → переместить вправо
+                ↑ повернуть влево; ↓ повернуть вправо
+                пробел - мгновенное падение
+                
+                Created by Чистяков Константин
+                    студент группы ЕТ-311
+                Исходный код на GitHub: https://github.com/ArribaSon/Tetris
+                """);
         add(textPane, BorderLayout.NORTH);
 
         setLocationRelativeTo(null);

@@ -117,20 +117,21 @@ public class GameField extends JPanel {
     }
 
     private void dropDown() {
+        if(!isPaused){
+            int newY = currentY;
 
-        int newY = currentY;
+            while (newY > 0) {
 
-        while (newY > 0) {
+                if (!move(currentShape, currentX, newY - 1)) {
 
-            if (!move(currentShape, currentX, newY - 1)) {
+                    break;
+                }
 
-                break;
+                newY--;
             }
 
-            newY--;
+            pieceDropped();
         }
-
-        pieceDropped();
     }
 
     private void clearBoard() {
@@ -171,6 +172,11 @@ public class GameField extends JPanel {
             }
 
             if (shapeAt(x, y) != TypeShape.NoShape) {
+
+                return false;
+            }
+
+            if (isPaused) {
 
                 return false;
             }

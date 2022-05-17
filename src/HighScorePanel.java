@@ -8,7 +8,7 @@ public class HighScorePanel  extends JFrame {
     public HighScorePanel(int[] scores, Tetris tetris){
         setResizable(false);
 
-        setTitle("Tetris");
+        setTitle("Top");
         setSize(200, 200);
         setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
         addWindowListener(new WindowListener() {
